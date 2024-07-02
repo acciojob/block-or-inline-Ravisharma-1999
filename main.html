@@ -1,16 +1,113 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block vs Inline Elements</title>
+    <style>
+        .container {
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .block {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .inline {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .inline-block {
+            display: inline-block;
+            margin-right: 10px;
+        }
+    </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+    <div class="container">
+        <!-- Button -->
+        <div class="block">
+            <button class="block-inline-button" data-ns-test="block-inline-button">Test1</button>
+        </div>
+        <div class="inline">
+            <button class="block-inline-button" data-ns-test="block-inline-button">Test2</button>
+        </div>
 
+        <!-- Div -->
+        <div class="block">
+            <div class="block-inline-div" data-ns-test="block-inline-div">Test1</div>
+        </div>
+        <div class="inline">
+            <div class="block-inline-div" data-ns-test="block-inline-div">Test2</div>
+        </div>
+
+        <!-- Span -->
+        <div class="block">
+            <span class="block-inline-span" data-ns-test="block-inline-span">Test1</span>
+        </div>
+        <div class="inline">
+            <span class="block-inline-span" data-ns-test="block-inline-span">Test2</span>
+        </div>
+
+        <!-- Paragraph -->
+        <div class="block">
+            <p class="block-inline-p" data-ns-test="block-inline-p">Test1</p>
+        </div>
+        <div class="inline">
+            <p class="block-inline-p" data-ns-test="block-inline-p">Test2</p>
+        </div>
+
+        <!-- Input -->
+        <div class="block">
+            <input type="text" class="block-inline-input" data-ns-test="block-inline-input" value="Test1">
+        </div>
+        <div class="inline">
+            <input type="text" class="block-inline-input" data-ns-test="block-inline-input" value="Test2">
+        </div>
+
+        <!-- Cite -->
+        <div class="block">
+            <cite class="block-inline-cite" data-ns-test="block-inline-cite">Test1</cite>
+        </div>
+        <div class="inline">
+            <cite class="block-inline-cite" data-ns-test="block-inline-cite">Test2</cite>
+        </div>
+
+        <!-- Code -->
+        <div class="block">
+            <code class="block-inline-code" data-ns-test="block-inline-code">Test1</code>
+        </div>
+        <div class="inline">
+            <code class="block-inline-code" data-ns-test="block-inline-code">Test2</code>
+        </div>
+
+        <!-- H1 -->
+        <div class="block">
+            <h1 class="block-inline-h1" data-ns-test="block-inline-h1">Test1</h1>
+        </div>
+        <div class="inline">
+            <h1 class="block-inline-h1" data-ns-test="block-inline-h1">Test2</h1>
+        </div>
+
+        <!-- Sup -->
+        <div class="block">
+            <sup class="block-inline-sup" data-ns-test="block-inline-sup">Test1</sup>
+        </div>
+        <div class="inline">
+            <sup class="block-inline-sup" data-ns-test="block-inline-sup">Test2</sup>
+        </div>
+
+        <!-- Sub -->
+        <div class="block">
+            <sub class="block-inline-sub" data-ns-test="block-inline-sub">Test1</sub>
+        </div>
+        <div class="inline">
+            <sub class="block-inline-sub" data-ns-test="block-inline-sub">Test2</sub>
+        </div>
+    </div>
 </body>
-
 </html>
