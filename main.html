@@ -1,94 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Block vs Inline Elements</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block or Inline</title>
 </head>
 <body>
-  <div id="container">
-    <!-- Button -->
-    <div class="block-inline-button" data-ns-test="block-inline-button">
-      <button>Test1</button>
-      <button>Test2</button>
+    <div>
+        <button data-ns-test="block-inline-button">Test1</button>
+        <button data-ns-test="block-inline-button">Test2</button>
+        Answer: Inline
     </div>
-    
-    <!-- Div -->
-    <div class="block-inline-div" data-ns-test="block-inline-div">
-      <div>Test1</div>
-      <div>Test2</div>
+    <div>
+        <div data-ns-test="block-inline-div">Test1</div>
+        <div data-ns-test="block-inline-div">Test2</div>
+        Answer: Block
     </div>
-    
-    <!-- Span -->
-    <div class="block-inline-span" data-ns-test="block-inline-span">
-      <span>Test1</span>
-      <span>Test2</span>
+    <div>
+        <span data-ns-test="block-inline-span">Test1</span>
+        <span data-ns-test="block-inline-span">Test2</span>
+        Answer: Inline
     </div>
-    
-    <!-- Paragraph -->
-    <div class="block-inline-p" data-ns-test="block-inline-p">
-      <p>Test1</p>
-      <p>Test2</p>
+    <div>
+        <p data-ns-test="block-inline-p">Test1</p>
+        <p data-ns-test="block-inline-p">Test2</p>
+        Answer: Block
     </div>
-    
-    <!-- Input -->
-    <div class="block-inline-input" data-ns-test="block-inline-input">
-      <input type="text" value="Test1">
-      <input type="text" value="Test2">
+    <div>
+        <input data-ns-test="block-inline-input" value="Test1">
+        <input data-ns-test="block-inline-input" value="Test2">
+        Answer: Inline
     </div>
-    
-    <!-- Cite -->
-    <div class="block-inline-cite" data-ns-test="block-inline-cite">
-      <cite>Test1</cite>
-      <cite>Test2</cite>
+    <div>
+        <cite data-ns-test="block-inline-cite">Test1</cite>
+        <cite data-ns-test="block-inline-cite">Test2</cite>
+        Answer: Inline
     </div>
-    
-    <!-- Code -->
-    <div class="block-inline-code" data-ns-test="block-inline-code">
-      <code>Test1</code>
-      <code>Test2</code>
+    <div>
+        <code data-ns-test="block-inline-code">Test1</code>
+        <code data-ns-test="block-inline-code">Test2</code>
+        Answer: Inline
     </div>
-    
-    <!-- Heading 1 -->
-    <div class="block-inline-h1" data-ns-test="block-inline-h1">
-      <h1>Test1</h1>
-      <h1>Test2</h1>
+    <div>
+        <h1 data-ns-test="block-inline-h1">Test1</h1>
+        <h1 data-ns-test="block-inline-h1">Test2</h1>
+        Answer: Block
     </div>
-    
-    <!-- Superscript -->
-    <div class="block-inline-sup" data-ns-test="block-inline-sup">
-      <sup>Test1</sup>
-      <sup>Test2</sup>
+    <div>
+        <sup data-ns-test="block-inline-sup">Test1</sup>
+        <sup data-ns-test="block-inline-sup">Test2</sup>
+        Answer: Inline
     </div>
-    
-    <!-- Subscript -->
-    <div class="block-inline-sub" data-ns-test="block-inline-sub">
-      <sub>Test1</sub>
-      <sub>Test2</sub>
+    <div>
+        <sub data-ns-test="block-inline-sub">Test1</sub>
+        <sub data-ns-test="block-inline-sub">Test2</sub>
+        Answer: Inline
     </div>
-  </div>
-
-  <script>
-    // JavaScript to determine and output whether each element is block or inline
-    const container = document.getElementById('container');
-    const elements = container.children;
-
-    for (let i = 0; i < elements.length; i++) {
-      const element = elements[i];
-      const tagName = element.children[0].tagName.toLowerCase();
-      const computedDisplay = getComputedStyle(element.children[0]).display;
-
-      // Determine if the element is block or inline
-      let answer;
-      if (computedDisplay === 'block') {
-        answer = "Block";
-      } else if (computedDisplay === 'inline') {
-        answer = "Inline";
-      }
-
-      // Output the result
-      console.log(`${tagName} Answer: ${answer}`);
-    }
-  </script>
 </body>
 </html>
